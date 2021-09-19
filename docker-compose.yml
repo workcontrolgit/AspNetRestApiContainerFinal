@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  aspnetrestapicontainer.webapi:
+    image: ${DOCKER_REGISTRY-}aspnetrestapicontainerwebapi
+    build:
+      context: .
+      dockerfile: AspNetRestApiContainer/AspNetRestApiContainer.WebApi/Dockerfile
+  db:
+    image: "mcr.microsoft.com/mssql/server:2017-latest"
